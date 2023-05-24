@@ -44,7 +44,7 @@ convert a source program (given to a computer) into machine language.
 	```
 
 ## References
-(AVR instraction set) [http://lyons42.com/AVR/Opcodes/AVRAllOpcodes.html]
-(Delay in assembly for avr microcontrollers) [https://stackoverflow.com/questions/24097526/how-to-make-a-delay-in-assembly-for-avr-microcontrollers]
-(Read the fuses with avrdude) [https://stackoverflow.com/questions/74260385/how-to-read-the-fuses-with-avrdude]
-(Convert Binary to Hexadecimal) [https://www.geeksforgeeks.org/how-to-convert-binary-to-hexadecimal/]
+- [AVR instraction set](http://lyons42.com/AVR/Opcodes/AVRAllOpcodes.html)
+- [Delay in assembly for avr microcontrollers] (https://stackoverflow.com/questions/24097526/how-to-make-a-delay-in-assembly-for-avr-microcontrollers)
+- [Read the fuses with avrdude] (https://stackoverflow.com/questions/74260385/how-to-read-the-fuses-with-avrdude)
+- [Convert Binary to Hexadecimal] (https://www.geeksforgeeks.org/how-to-convert-binary-to-hexadecimal/)
