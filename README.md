@@ -1,9 +1,6 @@
 ## Assembler project
 
-Introduction to assembler.
-Assembly language is a low-level language that is used 
-within an operating system to automatically 
-convert a source program (given to a computer) into machine language.
+This is a project for teaching the basic principles of avr assembler
 
 ## Commands
 
