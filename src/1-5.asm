@@ -5,7 +5,17 @@ SER r16 ; set 0xff
 OUT $11,r16
 OUT $17,r16
 
-CLR r19
+; CLR r19 ; cleanup register
+
+LDI r19, 0x0
+RCALL EEPROM_read
+MOV r4, r20
+
+LDI r19, 0x1
+RCALL EEPROM_read
+MOV r5, r20
+
+LDI r19, 2
 
 loop:
 RCALL EEPROM_read
@@ -59,6 +69,7 @@ INC r19
 CPI r19, 128
 BRNE loop
 LDI r19, 2
+
 RJMP loop
 
 #include "1-common.inc"
