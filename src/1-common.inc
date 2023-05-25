@@ -1,19 +1,20 @@
 sleep:
-    LDI     r21,   2
+    LDI     r21,   1		; One clock cycle;
 sleep_1:
-    LDI     r22,   125
+    LDI     r22,   125		; One clock cycle;
 sleep_2:
-    LDI     r23,   250
+    LDI     r23,   250		; One clock cycle;
 sleep_3:
-    DEC     r23
-    NOP
-    BRNE    sleep_3
+    DEC     r23				; One clock cycle;
+    NOP						; One clock cycle;
+    BRNE    sleep_3			; Two clock cycles when jumping to sleep_3, 1 clock when continuing to DEC;
 
-    DEC     r22
-    BRNE    sleep_2
 
-    DEC     r21
-    BRNE    sleep_1
+    DEC     r22				; One clock cycle;
+    BRNE    sleep_2			; Two clock cycles when jumping to sleep_2, 1 clock when continuing to DEC;
+
+    DEC     r21				; One clock cycle;
+    BRNE    sleep_1			; Two clock cycles when jumping to Delay1, 1 clock when continuing to RET;
 RET
 
 set_and_sleep:
@@ -25,3 +26,17 @@ RET
 halt:
     NOP
 RJMP halt
+
+
+EEPROM_read:
+; Wait for completion of previous write;
+SBIC 0x1c,1 ; Check 1(EEPE) to bit 1 of EECR
+RJMP EEPROM_read
+; Set up address in address registers;
+OUT $1e,r19 ; EEAR;
+; Start eeprom read by writing EERE;
+SBI 0x1c,0 ; Set 1(EERE) to bit 0 of EECR
+; Read data from data register;
+IN r20,$1d ; EEDR;
+RET
+
