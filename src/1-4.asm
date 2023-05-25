@@ -8,7 +8,7 @@ OUT $17,r16
 CLR r19
 
 loop:
-RCALL EEPROM_read
+MOV r20,r19
 
 SER r30
 SER r31
@@ -53,13 +53,13 @@ BRCC next_7
 CBR r31, 0x4
 next_7:
 
-
 RCALL set_and_sleep
 
 INC r19
-
+CPI r19, 128
+BRNE loop
+LDI r19, 0
 RJMP loop
-
 
 #include "1-common.inc"
 

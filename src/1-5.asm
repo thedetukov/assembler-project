@@ -53,13 +53,13 @@ BRCC next_7
 CBR r31, 0x4
 next_7:
 
-
 RCALL set_and_sleep
 
 INC r19
-
+CPI r19, 128
+BRNE loop
+LDI r19, 2
 RJMP loop
-
 
 #include "1-common.inc"
 
