@@ -45,3 +45,4 @@ This is a project for teaching the basic principles of avr assembler
 - [Delay in assembly for avr microcontrollers](https://stackoverflow.com/questions/24097526/how-to-make-a-delay-in-assembly-for-avr-microcontrollers)
 - [Read the fuses with avrdude](https://stackoverflow.com/questions/74260385/how-to-read-the-fuses-with-avrdude)
 - [Convert Binary to Hexadecimal](https://www.geeksforgeeks.org/how-to-convert-binary-to-hexadecimal/)
+- [Stack abstract data type](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
