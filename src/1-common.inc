@@ -11,15 +11,15 @@ sleep_1:
 sleep_2:
 	LDI		r23,	250		; One clock cycle;
 sleep_3:
-	DEC		r23				; One clock cycle;
-	NOP						; One clock cycle;
-	BRNE	sleep_3			; Two clock cycles when jumping to sleep_3, 1 clock when continuing to DEC;
+	DEC		r23			; One clock cycle;
+	NOP					; One clock cycle;
+	BRNE	sleep_3				; Two clock cycles when jumping to sleep_3, 1 clock when continuing to DEC;
 
-	DEC		r22				; One clock cycle;
-	BRNE	sleep_2			; Two clock cycles when jumping to sleep_2, 1 clock when continuing to DEC;
+	DEC		r22			; One clock cycle;
+	BRNE	sleep_2				; Two clock cycles when jumping to sleep_2, 1 clock when continuing to DEC;
 
-	DEC		r21				; One clock cycle;
-	BRNE	sleep_1			; Two clock cycles when jumping to Delay1, 1 clock when continuing to RET;
+	DEC		r21			; One clock cycle;
+	BRNE	sleep_1				; Two clock cycles when jumping to Delay1, 1 clock when continuing to RET;
 RET
 
 set_and_sleep:
