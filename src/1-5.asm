@@ -3,9 +3,7 @@
 ; Config PORTB and PORTD for output
 SER r16 ; set 0xff
 OUT $11,r16
-OUT $17,r16
-
-; CLR r19 ; cleanup register
+OUT $17,r16 
 
 LDI r19, 0x0
 RCALL EEPROM_read
