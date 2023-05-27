@@ -3,9 +3,9 @@
 ; while executing the delay because you are using it to count cycles.
 
 sleep:
-	LDI		r21,	1			; One clock cycle;
+	MOV		r21,	r4		; One clock cycle;
 sleep_1:
-	;LDI	r22,	125		; One clock cycle;
+	MOV		r22,	r5		; One clock cycle;
 sleep_2:
 	LDI		r23,	250		; One clock cycle;
 sleep_3:

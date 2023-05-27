@@ -70,5 +70,5 @@ LDI r19, 2
 
 RJMP loop
 
-#include "1-5-common.inc"
+#include "1-common.inc"
 
