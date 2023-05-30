@@ -3,9 +3,9 @@
 ; while executing the delay because you are using it to count cycles.
 
 sleep:
-	LDI		r21,	1		; One clock cycle;
+	MOV		r21,	r4		; One clock cycle;
 sleep_1:
-	;LDI	r22,	125		; One clock cycle;
+	MOV		r22,	r5		; One clock cycle;
 sleep_2:
 	LDI		r23,	250		; One clock cycle;
 sleep_3:
@@ -41,6 +41,7 @@ EEPROM_read:
 	RJMP EEPROM_read
 	; Set up address in address registers;
 	OUT $1e,r19 ; EEAR;
+	
 	; Start eeprom read by writing EERE;
 	SBI 0x1c,0 ; Set 1(EERE) to bit 0 of EECR
 	; Read data from data register;

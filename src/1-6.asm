@@ -5,13 +5,20 @@ SER r16 ; set 0xff
 OUT $11,r16
 OUT $17,r16 
 
-LDI r19, 0x0
+LDI r3, 12
+PUSH r3
 RCALL EEPROM_read
-MOV r4, r20
+POP r20
+RCALL SET
 
-LDI r19, 0x1
-RCALL EEPROM_read
-MOV r5, r20
+
+;LDI r19, 0x0
+;RCALL EEPROM_read
+;MOV r4, r20
+
+;LDI r19, 0x1
+;RCALL EEPROM_read
+;MOV r5, r20
 
 LDI r19, 2
 
