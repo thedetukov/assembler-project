@@ -2,7 +2,7 @@ sleep:
 	POP		r21
 	POP		r21
 sleep_1:
-	POP		r21
+	POP		r22
 	POP		r22
 sleep_2:
 	LDI		r23,	250
