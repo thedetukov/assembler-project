@@ -5,7 +5,7 @@
 sleep:
 	LDI		r21,	1			; One clock cycle;
 sleep_1:
-	;LDI	r22,	125		; One clock cycle;
+	LDI		r22,	125		; One clock cycle;
 sleep_2:
 	LDI		r23,	250		; One clock cycle;
 sleep_3:

@@ -13,7 +13,6 @@ LDI r19, 0x1
 RCALL EEPROM_read
 MOV r5, r20
 
-LDI r19, 2
 
 loop:
 RCALL EEPROM_read
@@ -21,45 +20,6 @@ RCALL EEPROM_read
 SER r30
 SER r31
 
-ROL r20
-BRCC next_0
-CBR r30, 0x1
-next_0:
-
-ROL r20
-BRCC next_1
-CBR r30, 0x2
-next_1:
-
-ROL r20
-BRCC next_2
-CBR r30, 0x4
-next_2:
-
-ROL r20
-BRCC next_3
-CBR r30, 0x8
-next_3:
-
-ROL r20
-BRCC next_4
-CBR r30, 0x10
-next_4:
-
-ROL r20
-BRCC next_5
-CBR r31, 0x1
-next_5:
-
-ROL r20
-BRCC next_6
-CBR r31, 0x2
-next_6:
-
-ROL r20
-BRCC next_7
-CBR r31, 0x4
-next_7:
 
 RCALL set_and_sleep
 
