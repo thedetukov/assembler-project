@@ -1,12 +1,12 @@
-#include "tn2313def_for_avra.inc"
-
-LDI R16, LOW(RAMEND)		; установливаем указатель стека на последний адрес ОЗУ
-OUT SPL, R16				; записать в SPL значение из R16
+POP r26
+POP r27
+POP r28
+POP r29
 
 sleep:
-	POP		r21
+	MOV		r21,	r28
 sleep_1:
-	POP		r22
+	MOV		r22,	r29
 sleep_2:
 	LDI		r23,	250
 sleep_3:
@@ -14,9 +14,13 @@ sleep_3:
 	NOP
 	BRNE	sleep_3
 
-	DEC		r22
+	DEC		r21
 	BRNE	sleep_2
 
-	DEC		r21
+	DEC		r22
 	BRNE	sleep_1
+
+PUSH r27
+PUSH r26
+
 RET
