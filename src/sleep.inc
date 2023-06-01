@@ -1,6 +1,6 @@
 #include "tn2313def_for_avra.inc"
 
-LDI R16, LOW(RAMEND)		; установливаем указатель стека на конец ОЗУ
+LDI R16, LOW(RAMEND)		; установливаем указатель стека на последний адрес ОЗУ
 OUT SPL, R16				; записать в SPL значение из R16
 
 sleep:
