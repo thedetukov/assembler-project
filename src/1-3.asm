@@ -49,4 +49,4 @@ RCALL set_and_sleep
 
 RJMP begin
 
-#include "1-common.inc"
+#include "1-6-common.inc"
