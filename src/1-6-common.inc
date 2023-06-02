@@ -1,9 +1,12 @@
+
+
+sleep:
+
 POP r26
 POP r27
 POP r28
 POP r29
 
-sleep:
 	MOV		r21,	r28
 sleep_1:
 	MOV		r22,	r29
