@@ -29,6 +29,7 @@ RET
 set_and_sleep:
 	OUT $18,r30
 	OUT $12,r31
+	PUSH r28
+	PUSH r29
 	RCALL sleep
 RET
-

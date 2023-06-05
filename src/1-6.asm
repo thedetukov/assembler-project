@@ -7,8 +7,6 @@ OUT $17,r16
 
 LDI r28, 2
 LDI r29, 125
-PUSH r29
-PUSH r28
 
 begin:
 
